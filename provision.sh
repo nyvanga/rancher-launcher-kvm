@@ -26,7 +26,7 @@ create_vm () {
 
   echo "Creating new ks.cfg file..."
   cp ks.cfg.template $VM_KS
-  sed -i 's/TMPL_PSWD/praqma/g' $VM_KS
+  sed -i 's/TMPL_PSWD/'$rke_password'/g' $VM_KS
   sed -i 's/TMPL_HOSTNAME/'$vm_prefix-$VM_NB'/g' $VM_KS
   sed -i 's/TMPL_IP/192.168.122.'$VM_IP'/g' $VM_KS
   sed -i "s;TMPL_SSH_KEY;$SSH_KEY;g" $VM_KS
