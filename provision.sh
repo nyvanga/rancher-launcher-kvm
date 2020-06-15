@@ -40,7 +40,6 @@ create_vm () {
     --memory $vm_ram \
     --vcpus $vm_vcpu \
     --disk path=$image_location/$vm_prefix-$VM_NB.qcow2,size=15 \
-    --os-type linux \
     --os-variant $vm_variant \
     --network bridge=virbr0 \
     --graphics vnc,listen=127.0.0.1,port=$VM_PORT \
