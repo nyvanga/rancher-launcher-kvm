@@ -37,7 +37,7 @@ create_vm () {
   echo "Creating virtual machine and running installer..."
   virt-install --name $vm_prefix-$VM_NB \
     --description "$vm_description-$VM_NB" \
-    --ram $vm_ram \
+    --memory $vm_ram \
     --vcpus $vm_vcpu \
     --disk path=$image_location/$vm_prefix-$VM_NB.qcow2,size=15 \
     --os-type linux \
